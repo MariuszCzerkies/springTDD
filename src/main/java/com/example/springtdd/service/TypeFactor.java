@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class TypeFactor {
 
-    private String type;
-
-    double typeFactor() {
+    public Double typeFactor(String type) {
         switch (type) {
             case "Cabriolet":
                 return 1.3;
@@ -17,11 +15,9 @@ public class TypeFactor {
                 return 1.5;
             case "Hatchback":
                 return 1.6;
-            case "Other":
+            default:
                 return 1.7;
         }
-
-        return 1.7;
     }
 
 }
